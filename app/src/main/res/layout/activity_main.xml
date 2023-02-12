@@ -11,6 +11,14 @@
     android:layout_width="match_parent"
     android:id="@+id/coordinatorlayout"
     android:layout_height="match_parent">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:elevation="0dp">
+
+
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -18,14 +26,18 @@
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        android:background="@color/material_dynamic_primary30" />
+        android:background="@color/material_dynamic_primary30"
+        app:layout_scrollFlags="scroll"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
 
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
 
     </FrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
